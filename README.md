@@ -5,8 +5,8 @@ This repository contains the final project for the course **Information Visualiz
 The project aims to highlight the contributions of women directors. 
 
 ## Credits
-- **Ulzhan Baizhankyzy**
-- **Olga Makarkina**
+- **Ulzhan Baizhankyzy: data access and cleaning, data ivestigation, data analysis**
+- **Olga Makarkina: data ivestigation, data analysis, web development**
 
 ## License
 The data used in this project is gathered from **Wikidata**.
