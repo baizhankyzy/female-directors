@@ -44,7 +44,7 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">GP</h1>
+        <h1 class="sitename">Female directors</h1>
         <span>.</span>
       </a>
 
@@ -60,7 +60,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+    
 
     </div>
   </header>
@@ -152,8 +152,8 @@
             <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-camera-reels flex-shrink-0"></i>
               <div>
-                <h4>Women Directors and Independent Cinema</h4>
-                <p>What is the relationship between independent cinema and the rise of women directors in cinema industry?</p>
+                <h4>Awards vs. Nominations </h4>
+                <p>What is the ratio of awards won to nominations across years for female directors?                </p>
               </div>
             </div><!-- End Features Item-->
 
@@ -178,13 +178,9 @@
           <div class="col-xl-10">
             <div class="text-center">
               <h3>Data Preparation</h3>
-              <p>We examined the data models of Wikidata and DBpedia regarding female directors, films, genres, and release dates.</p>
-              <p>Data Collection: Release dates, the number of films directed by women, countries, and the number of women directors were collected from Wikidata and DBpedia. We queried both Wikidata and DBpedia SPARQL endpoints, reconciled the data, and removed duplicates. Despite this process, the final dataset was significantly reduced, resulting in only 109 matches by director labels (e.g., Lana Wachowski). This reduction contrasts with the fact that Wikidata alone lists 10,342 female directors!
-                DBpedia Issues: DBpedia presents challenges with gender identity. While it uses the RDF label "female director", many entries for the gender property remain unknown or unpopulated. As a result, DBpedia cannot be relied upon for fully reconciling data with Wikidata due to its significant lack of information.
-                IMDb Limitations: IMDb does not provide comprehensive film data. It offers subsets of its database for personal and non-commercial use, but these subsets are limited. The broadest available datasets only include: titleType (string), startYear (YYYY), runtimeMinutes, genres (string array).
-                This limitation prevents access to complete information about films directed by women, further constraining the analysis.
+              <p>We examined the data models of Wikidata and IMDb regarding female directors, films, genres, release dates, awards and nominations.</p>
+              <p>The Internet Movie Database (IMDB) is one of the most popular websites in the world. It contains a vast database of movies, actors, and directors, as well as trivia and reviews for each movie.
                 </p>
-                <p>The Europeana Data Model (EDM) does not include a specific property to denote the gender of creators, such as schema:gender. The EDM primarily focuses on properties like dc:creator to identify the creator of a cultural heritage object, without detailing attributes like gender. This is evident in the EDM Mapping Guidelines, which outline the properties and classes used within the model. The guidelines detail various metadata elements but do not specify a property for capturing the gender of creators. Additionally, the EDM documentation available on Europeana’s professional portal provides comprehensive information about the model’s structure and elements. A review of these resources confirms the absence of a gender-specific property for creators. Therefore, while EDM facilitates the integration and sharing of cultural heritage metadata across Europe, it currently lacks provisions for recording the gender of creators within its standard schema.
               
           
             </div>
@@ -217,11 +213,21 @@
         
 
             <h3>Research question 1. How has the number of women directors in feature films changed over the last 30 years </h3>
-            <p>
-              To illustrate the changes over time, we present a bar chart with the x-axis representing the "year" and the y-axis representing the "number of films" directed by women.
+          <div>
+            <iframe src="charts/number_of_films_chart_rq1.html" width="100%" height="600" frameborder="0"></iframe>
+          </div>
+          </div> 
 
-              The data reveals a general upward trend in the number of feature films directed by women over the past three decades all around the world, indicating increasing participation of women in the film industry. The highest point was recorded in 2016, with 1,448 films directed by women, while the lowest point occurred in 1994, with just 224 films.
-              However, recent years show a notable decline, with 2024 displaying a significant drop in numbers. This trend highlights both the progress made in empowering women directors and the ongoing challenges they face in achieving consistent and sustainable representation within the industry.            </p>
+
+            <p>The data confirms a steady upward trend in the number of feature films directed by women worldwide, with 2016 being a standout year, recording 1,448 films, compared to the lowest point in 1994, with just 224 films. This demonstrates that more women have been entering and establishing themselves in the filmmaking industry.
+
+              In addition to tracking the overall number of films directed by women, an analysis of genres reveals interesting trends: 2016 saw a notable rise in the popularity of documentaries directed by women 
+                 </p>
+                 <div>
+                  <iframe src="charts/top_genres_rq1.html" width="100%" height="600" frameborder="0"></iframe>
+                </div>
+                
+            <p>Documentaries often have lower production costs and fewer barriers to entry, potentially making them a more accessible genre for women directors. This highlights the structural challenges in more resource-intensive genres, such as action or large-scale dramas. This shift suggests that documentaries may serve as a more accessible or favorable entry point for female directors, enabling greater representation in this genre. </p>
 
             <div class="row gy-4">
 
@@ -235,13 +241,20 @@
         
 
               <h3>Research question 2. Which countries have the highest and lowest numbers of women directors ? </h3>
+              <div>
+                <iframe src="charts/map_rq2.html" width="100%" height="600" frameborder="0"></iframe>
+              </div>
               <p>
-                To illustrate which countries have the highest and lowest numbers of women directors in feature films, we developed an interactive map using Plotly (picture 1). The map is interactive on Google Colab notebook</p>
-  
-               <p> Additionally, we created two horizontal bar charts:
-The first bar chart (pic.2) visualizes the top 10 countries by the number of women directors. The x-axis represents the number of women directors, while the y-axis lists the countries. The United States has the largest number of female directors, whereas Russia ranks 10th.
-The second bar chart (pic.3) highlights the countries with the smallest number of female directors, sorted from smallest to largest. These countries include Yemen, Cambodia, Mozambique, Rwanda, Moldova, and Kazakhstan, demonstrating that many countries have minimal female representation in film directing. </p>
-                <p>Finally, we created a pie chart (pic.4) to show the proportional share of women directors by country. The chart focuses on the top 20 countries and displays the percentage contribution of each country. The United States accounts for 20.08% of the total share, showcasing its leading position. </p>
+                To illustrate the global distribution of women directors in feature films, we created an interactive map using Plotly. The data reveals that the United States leads with the largest number of female directors, reflecting the highest representation worldwide. In contrast, many countries—particularly in regions like Africa and Southeast Asia—still demonstrate minimal female representation. This significant disparity highlights deeper structural challenges that vary across regions.    </p>
+               <p> One key factor contributing to underrepresentation in areas such as Africa and Southeast Asia is the presence of cultural barriers, limited funding opportunities, and restricted access to education in filmmaking. These obstacles hinder women from pursuing or sustaining careers as directors in these regions. Additionally, the lack of accessible data and research in these areas compounds the difficulty in identifying trends and addressing systemic issues, especially in niches such as independent cinema.  </p>
+                <p> Such countirs as Yemen, Cambodia, Mozambique, Rwanda, Moldova, and Kazakhstan as having minimal female representation in film directing. While progress has been made in certain regions, the persistent underrepresentation in these countries reflects systemic inequities that demand global attention and intervention. 
+                </p>
+                <div>
+                  <iframe src="charts/pie_chart_rq2.html" width="100%" height="600" frameborder="0"></iframe>
+                </div>
+                <p>Finally, we created a pie chart to show the proportional share of women directors by country.  The United States shows its leading position.</p>
+                <p>These results underscore the uneven progress in gender representation worldwide. While some regions have made strides through targeted policies and cultural shifts, others continue to face significant challenges. Achieving meaningful gender equity in feature film directing requires global collaboration, stronger support systems for women filmmakers, and a commitment to breaking down cultural and institutional barriers.</p>
+
   
               <div class="row gy-4">
 
@@ -255,21 +268,16 @@ The second bar chart (pic.3) highlights the countries with the smallest number o
           
   
                 <h3>Research question 3
-                  What is the relationship between independent cinema and the rise of women directors in cinema industry?
+                  What is the ratio of awards won to nominations across years for female directors?
                    </h3>
+                   <div>
+                    <iframe src="charts/awards_vs_nominations_chart.html" width="100%" height="600" frameborder="0"></iframe>
+                </div>
                 <p>
-                  Based on the previously extracted data, we decided to analyze independent cinema specifically in the USA.
-                  To classify films, we mapped movies directed by women to their distributors. Films produced with major distributors (e.g., Disney, Warner Bros., Universal) were categorized as "studio-produced", while those without major distributors were classified as "independent".
-                  To illustrate the findings, we used a line chart.</p>
-
-                  <p>A notable trend in 2016 was the rise of independent films, with 224 independent movies produced without major distributors such as Disney, Universal, or Warner Bros. This large number highlights the growing presence of independent female filmmakers, who often operate outside mainstream production systems.
-                    Additionally, 2016 marked a significant increase in the popularity of the documentary genre. This shift suggests that documentaries may serve as a more accessible or favorable entry point for female directors, enabling greater representation in this genre.</p>
+                  Both nominations (orange) and awards (blue) show a consistent increase over the years, with significant growth after 2010. This reflects a gradual rise in the recognition of female directors. Across all years, nominations far outnumber awards, indicating that while female directors are gaining visibility, the proportion of nominations that result in awards remains relatively low. There is a clear peak in nominations around 2019, followed by a slight decline in the subsequent years. Awards also show a similar trend, although the peak appears less pronounced.Despite some fluctuations, the awards-to-nominations ratio seems relatively stable. However, the absolute numbers indicate that female directors are receiving more recognition compared to earlier decades.</p>
                 <div class="row gy-4">
           </div>
-          <div>
-            <h1>Awards vs. Nominations by Year (1994–2024)</h1>
-            <iframe src="awards_vs_nominations_chart.html" width="100%" height="600" frameborder="0"></iframe>
-        </div>
+  
         </div> 
 
       </div>
